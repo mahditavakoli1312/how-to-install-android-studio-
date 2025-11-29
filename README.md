@@ -77,20 +77,19 @@ Android Studio حالا یک پروژه‌ی نمونه برای شما می‌�
 3. داخل بلاک `repositories` کد زیر را قرار دهید (یا به آن اضافه کنید):
 
 ```kotlin
-dependencyResolutionManagement {
     repositories {
+ maven {
+            url = uri("https://maven.myket.ir")
+        }
+
         google()
         mavenCentral()
 
         // مخزن Myket Maven
-        maven {
-            url = uri("https://maven.myket.ir")
-        }
-
+       
         // فقط اگر واقعاً نیاز داری:
         jcenter()
     }
-}
 ```
 
 فایل را ذخیره کنید و در بالای صفحه روی **Sync Now** کلیک کنید.
